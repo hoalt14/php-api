@@ -25,7 +25,7 @@
 						echo "<script>window.location='" . BASE_URL . "?pages=phong&type=add&id=" . $row['MaPhong'] . "'</script>";
 					} else {
 						// echo "Error updating record: " . $conn->error;
-						echo "<script>alert('Có lỗi xảy ra, vui lòng thử lại');</script>";
+						// echo "<script>alert('Có lỗi xảy ra, vui lòng thử lại');</script>";
 						echo "<script>window.location='" . BASE_URL . "?pages=phong&type=add&id=" . $row['MaPhong'] . "'</script>";
 					}
 				} else {
@@ -44,7 +44,7 @@
 						echo "<script>window.location='" . BASE_URL . "?pages=phong&type=add&id=" . $last_id . "'</script>";
 					} else {
 						// echo "Error: " . $sql . "<br>" . $conn->error;
-						// echo "<script>alert('Có lỗi xảy ra, vui lòng thử lại');</script>";
+						echo "<script>alert('Có lỗi xảy ra, vui lòng thử lại');</script>";
 						echo "<script>window.location='" . BASE_URL . "?pages=phong&type=add'</script>";
 					}
 				}
