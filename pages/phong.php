@@ -13,9 +13,9 @@
 
 					if (!empty($_FILES['HinhPhong']['name'])) {
 						$HinhPhong    = time() . ".png";
-						$sql = "UPDATE PHONG SET TenPhong='$TenPhong', GiaPhong='$GiaPhong', TinhTrang='$TinhTrang', HinhPhong = '$HinhPhong' WHERE MaPhong=" . $row['MaPhong'];
+						$sql = "UPDATE PHONG SET TenPhong='$TenPhong', GiaPhong=$GiaPhong, TinhTrang=$TinhTrang, HinhPhong = '$HinhPhong' WHERE MaPhong=" . $row['MaPhong'];
 					} else {
-						$sql = "UPDATE PHONG SET TenPhong='$TenPhong', GiaPhong='$GiaPhong', TinhTrang='$TinhTrang' WHERE MaPhong=" . $row['MaPhong'];
+						$sql = "UPDATE PHONG SET TenPhong='$TenPhong', GiaPhong=$GiaPhong, TinhTrang=$TinhTrang WHERE MaPhong=" . $row['MaPhong'];
 					}
 
 					if ($conn->query($sql) === TRUE) {
