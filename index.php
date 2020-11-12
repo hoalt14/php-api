@@ -1,1 +1,1 @@
-<h1 style='text-align: center;margin-top: 10%;'>ỨNG DỤNG NGƯỜI THUÊ TRỌ</h1>
+<h1 style='text-align: center;margin-top: 10%;'>Welcome to PHP - API with Room for Rent</h1>

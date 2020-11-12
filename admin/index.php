@@ -1,9 +1,9 @@
 <?php
 require_once '../connect.php';
 
-define('BASE_URL', 'http://testphp.newpinetech.com/admin/');
-define('BASE_PUBLIC', 'http://testphp.newpinetech.com/public/');
-define('BASE_UPLOAD', 'http://testphp.newpinetech.com/upload/');
+define('BASE_URL', 'http://room.rent.com/admin/');
+define('BASE_PUBLIC', 'http://room.rent.com/public/');
+define('BASE_UPLOAD', 'http://room.rent.com/upload/');
 
 ?>
 
@@ -30,21 +30,21 @@ define('BASE_UPLOAD', 'http://testphp.newpinetech.com/upload/');
 
 <body>
 	<div class="header-bar">
-		<h3 style="margin: 0 auto; text-align: center; padding-top: 7px;">TRANG QUẢN TRỊ ỨNG DỤNG</h3>
+		<h3 style="margin: 0 auto; text-align: center; padding-top: 7px;">Administrator Management Page</h3>
 	</div>
 	<div class='sidebar-left'>
 		<h4 style='color: #848484;padding: 10px 25px 10px 15px;font-size: 12px;'>MAIN NAVIGATION</h4>
 		<ul class='ul-control'>
 			<li>
-				<a href="<?php echo BASE_URL ?>?pages=phong" class='<?php echo @$_GET['pages'] == 'phong' ? 'active' : ''; ?>'>
+				<a href="<?php echo BASE_URL ?>?pages=room" class='<?php echo @$_GET['pages'] == 'room' ? 'active' : ''; ?>'>
 					<i class='fa fa-tags'></i>
-					<label>Phòng</label>
+					<label>Room</label>
 				</a>
 			</li>
 			<li>
-				<a href="<?php echo BASE_URL ?>?pages=phieuthue" class='<?php echo @$_GET['pages'] == 'phieuthue' ? 'active' : ''; ?>'>
+				<a href="<?php echo BASE_URL ?>?pages=rent" class='<?php echo @$_GET['pages'] == 'rent' ? 'active' : ''; ?>'>
 					<i class='fa fa-tags'></i>
-					<label>Phiếu thuê</label>
+					<label>Rent</label>
 				</a>
 			</li>
 		</ul>
