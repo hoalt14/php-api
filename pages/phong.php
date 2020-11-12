@@ -86,7 +86,9 @@
 					<div class="form-group">
 						<label for="input" class="col-sm-2 control-label">Tình Trạng</label>
 						<div class="col-sm-10">
-							<input type="text" name="TinhTrang" class="form-control" value="<?php echo @$row['TinhTrang'] ?>" required="required">
+							<input type="text" name="TinhTrang" class="form-control" value="<?php if (@$row['TinhTrang'] == 0) {
+								echo 'Có';
+							} else echo 'Không';?>" required="required">
 						</div>
 					</div>
 
