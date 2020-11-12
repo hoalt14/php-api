@@ -6,13 +6,15 @@ define('BASE_PUBLIC', 'http://testphp.newpinetech.com/public/');
 define('BASE_UPLOAD', 'http://testphp.newpinetech.com/upload/');
 
 ?>
+
 <html lang="">
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Administrator</title>
+	<title>Admin</title>
+
 	<link rel="stylesheet" href="<?php echo BASE_PUBLIC ?>roboto.css">
 	<link rel="stylesheet" href="<?php echo BASE_PUBLIC ?>font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo BASE_PUBLIC ?>bootstrap.min.css">
@@ -21,7 +23,6 @@ define('BASE_UPLOAD', 'http://testphp.newpinetech.com/upload/');
 
 	<script src="<?php echo BASE_PUBLIC ?>jquery.js"></script>
 	<script src="<?php echo BASE_PUBLIC ?>bootstrap.min.js"></script>
-
 	<script src="<?php echo BASE_PUBLIC ?>datatable/js/jquery.dataTables.js"></script>
 	<script src="<?php echo BASE_PUBLIC ?>datatable/js/dataTables.bootstrap.js"></script>
 	<script src="<?php echo BASE_PUBLIC ?>custom.js"></script>
@@ -40,6 +41,12 @@ define('BASE_UPLOAD', 'http://testphp.newpinetech.com/upload/');
 					<label>Phòng</label>
 				</a>
 			</li>
+			<li>
+				<a href="<?php echo BASE_URL ?>?pages=phieuthue" class='<?php echo @$_GET['pages'] == 'phieuthue' ? 'active' : ''; ?>'>
+					<i class='fa fa-tags'></i>
+					<label>Phiếu thuê</label>
+				</a>
+			</li>
 		</ul>
 	</div>
 	<div class='wrapper'>
@@ -50,7 +57,6 @@ define('BASE_UPLOAD', 'http://testphp.newpinetech.com/upload/');
 			include '../pages/home.php';
 		}
 		?>
-
 	</div>
 </body>
 
