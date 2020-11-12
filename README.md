@@ -1,4 +1,4 @@
-# php-api
+# php api
 
 ## mariadb
 
@@ -8,17 +8,15 @@
 
 ### create user / pass for login to database
 
-#### localhost
+- localhost
+  - create user 'r4r'@'localhost' identified by 'password';
+  - grant all privileges on room.* to 'r4r'@'localhost';
+  - flush privileges;
 
-- create user 'r4r'@'localhost' identified by 'password';
-- grant all privileges on room.* to 'r4r'@'localhost';
-- flush privileges;
-
-#### %
-
-- create user 'r4r'@'%' identified by 'password';
-- grant all privileges on room.* to 'r4r'@'%';
-- flush privileges;
+- %
+  - create user 'r4r'@'%' identified by 'password';
+  - grant all privileges on room.* to 'r4r'@'%';
+  - flush privileges;
 
 ## php-fpm
 
