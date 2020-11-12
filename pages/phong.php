@@ -126,6 +126,7 @@
 							<th>Tên Phòng</th>
 							<th>Giá Phòng</th>
 							<th>Tình Trạng</th>
+							<th>Hình Phòng</th>
 							<th>Sửa</th>
 							<th>Xóa</th>
 						</tr>
@@ -140,6 +141,7 @@
 											<td>$row[TenPhong]</td>
 											<td>$row[GiaPhong]</td>
 											<td>$row[TinhTrang]</td>
+											<td><img src='".BASE_UPLOAD."phong/$row[HinhPhong]' class='img-imge'></td>
 											<td><a href='" . BASE_URL . "?pages=phong&type=add&id=$row[MaPhong]'>Sửa</a></td>
 											<td><a href='" . BASE_URL . "?pages=phong&type=del&id=$row[MaPhong]'>Xóa</a></td>
 										</tr>";
