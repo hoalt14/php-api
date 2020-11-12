@@ -8,7 +8,7 @@
 
 ## php-fpm
 
-- create new socker
+- create new socket
 
 ## nginx
  
