@@ -86,9 +86,7 @@
 					<div class="form-group">
 						<label for="input" class="col-sm-2 control-label">Tình Trạng</label>
 						<div class="col-sm-10">
-							<input type="text" name="TinhTrang" class="form-control" value="<?php if (@$row['TinhTrang'] == 0) {
-								echo 'Có';
-							} else echo 'Không';?>" required="required">
+							<input type="text" name="TinhTrang" class="form-control" value="<?php echo @$row['TinhTrang'] ?>" required="required">
 						</div>
 					</div>
 
@@ -161,11 +159,14 @@
 							$result = $conn->query("SELECT * FROM PHONG");
 							if ($result->num_rows > 0) {
 								while ($row = $result->fetch_assoc()) {
-									echo "<tr>
+									echo '<tr>
 											<td>$row[MaPhong]</td>
 											<td>$row[TenPhong]</td>
 											<td>$row[GiaPhong]</td>
-											<td>$row[TinhTrang]</td>
+											<td>';
+										if ($row['TinhTrang'] == 1) echo 'Có';
+										else echo 'Không';	
+										echo "</td>
 											<td><img src='" . BASE_UPLOAD . "phong/$row[HinhPhong]' class='img-imge'></td>
 											<td><a href='" . BASE_URL . "?pages=phong&type=add&id=$row[MaPhong]'>Sửa</a></td>
 											<td><a href='" . BASE_URL . "?pages=phong&type=del&id=$row[MaPhong]'>Xóa</a></td>
