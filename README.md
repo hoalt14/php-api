@@ -2,13 +2,13 @@
 
 ## mariadb
 
-- create database
+#### create database
 
 > create database room;
 
-- create user / pass for login to database
+#### create user / pass for login to database
 
-* localhost
+- localhost
 
 > create user 'r4r'@'localhost' identified by 'password';
 
@@ -16,7 +16,7 @@
 
 > flush privileges;
 
-* %
+- %
 
 > create user 'r4r'@'%' identified by 'password';
 
