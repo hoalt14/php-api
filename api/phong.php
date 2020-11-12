@@ -4,7 +4,7 @@ require_once '../connect.php';
 if (@$_GET['MaPhong']) {
 	$sql = "SELECT * FROM PHONG WHERE MaPhong = " . $_GET['MaPhong'];
 } else {
-	if ($_GET['type'] == 'hot') {
+	if ($_GET['type'] == 'trong') {
 		$limit = @$_GET['limit'] ?: 6;
 		$where = array();
 		if ($_GET['TenPhong']) $where[] = "TenPhong LIKE '%" . $_GET['TenPhong'] . "%'";
