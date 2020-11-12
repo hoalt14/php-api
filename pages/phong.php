@@ -24,13 +24,13 @@
 						echo "<script>alert('Cập nhật Phòng thành công');</script>";
 						echo "<script>window.location='" . BASE_URL . "?pages=phong&type=add&id=" . $row['MaPhong'] . "'</script>";
 					} else {
-						echo "Error updating record: " . $conn->error;
+						// echo "Error updating record: " . $conn->error;
 						echo "<script>alert('Có lỗi xảy ra, vui lòng thử lại');</script>";
 						echo "<script>window.location='" . BASE_URL . "?pages=phong&type=add&id=" . $row['MaPhong'] . "'</script>";
 					}
 				} else {
 					$TenPhong     = $_POST['TenPhong'];
-					$GiaPhong= $_POST['GiaPhong'];
+					$GiaPhong = $_POST['GiaPhong'];
 					$TinhTrang = $_POST['TinhTrang'];
 					if (!empty($_FILES['HinhPhong']['name']))
 						$HinhPhong    = time() . ".png";
@@ -44,7 +44,7 @@
 						echo "<script>window.location='" . BASE_URL . "?pages=phong&type=add&id=" . $last_id . "'</script>";
 					} else {
 						// echo "Error: " . $sql . "<br>" . $conn->error;
-						echo "<script>alert('Có lỗi xảy ra, vui lòng thử lại');</script>";
+						// echo "<script>alert('Có lỗi xảy ra, vui lòng thử lại');</script>";
 						echo "<script>window.location='" . BASE_URL . "?pages=phong&type=add'</script>";
 					}
 				}
@@ -118,7 +118,7 @@
 		$result = $conn->query("SELECT * FROM phong WHERE MaPhong = $id LIMIT 1");
 		$row = $result->fetch_assoc();
 		if (!empty($row)) {
-			$sql = "DELETE FROM phong WHERE MaPhong=$id";
+			$sql = "DELETE FROM PHONG WHERE MaPhong=$id";
 			if ($conn->query($sql) === TRUE) {
 				@unlink('../upload/phong/' . $row['HinhPhong']);
 				echo "<script>alert('Xóa thành công');</script>";
