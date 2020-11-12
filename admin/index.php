@@ -37,13 +37,38 @@ define('BASE_UPLOAD', 'http://testphp.newpinetech.com/upload/');
 			<li>
 				<a href="<?php echo BASE_URL ?>?pages=quangcao" class='<?php echo @$_GET['pages'] == 'quangcao' ? 'active' : ''; ?>'>
 					<i class='fa fa-tags'></i>
-					<label>Người thuê</label>
+					<label>Quảng Cáo</label>
 				</a>
 			</li>
 			<li>
-				<a href="<?php echo BASE_URL ?>?pages=phong" class='<?php echo @$_GET['pages'] == 'phong' ? 'active' : ''; ?>'>
+				<a href="<?php echo BASE_URL ?>?pages=album" class='<?php echo @$_GET['pages'] == 'album' ? 'active' : ''; ?>'>
 					<i class='fa fa-tags'></i>
-					<label>Phòng</label>
+					<label>Album</label>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo BASE_URL ?>?pages=baihat" class='<?php echo @$_GET['pages'] == 'baihat' ? 'active' : ''; ?>'>
+					<i class='fa fa-tags'></i>
+					<label>Bài Hát</label>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo BASE_URL ?>?pages=chude" class='<?php echo @$_GET['pages'] == 'chude' ? 'active' : ''; ?>'>
+					<i class='fa fa-tags'></i>
+					<label>Chủ Đề</label>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo BASE_URL ?>?pages=playlist" class='<?php echo @$_GET['pages'] == 'playlist' ? 'active' : ''; ?>'>
+					<i class='fa fa-tags'></i>
+					<label>Playlist</label>
+				</a>
+			</li>
+
+			<li>
+				<a href="<?php echo BASE_URL ?>?pages=theloai" class='<?php echo @$_GET['pages'] == 'theloai' ? 'active' : ''; ?>'>
+					<i class='fa fa-tags'></i>
+					<label>Thể Loại</label>
 				</a>
 			</li>
 		</ul>
