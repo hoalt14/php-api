@@ -5,8 +5,12 @@
 			if (@$_POST['submit']) {
 				if (@$_GET['id']) {
 					$TenPhong     = $_POST['TenPhong'];
+					$GiaPhong     = $_POST['GiaPhong'];
+					$TinhTrang    = $_POST['TinhTrang'];
+
 					$result = $conn->query("SELECT * FROM PHONG WHERE MaPhong = " . $_GET['id'] . " LIMIT 1");
 					$row = $result->fetch_assoc();
+
 					if (!empty($_FILES['HinhPhong']['name'])) {
 						$HinhPhong    = time() . ".png";
 						$sql = "UPDATE PHONG SET TenPhong='$TenPhong', HinhPhong = '$HinhPhong' WHERE MaPhong=" . $row['MaPhong'];
@@ -28,10 +32,15 @@
 					}
 				} else {
 					$TenPhong     = $_POST['TenPhong'];
+					$GiaPhong     = $_POST['GiaPhong'];
+					$TinhTrang    = $_POST['TinhTrang'];
+
 					if (!empty($_FILES['HinhPhong']['name']))
 						$HinhPhong    = time() . ".png";
 					else $HinhPhong = '';
-					$sql = "INSERT INTO PHONG (TenPhong, HinhPhong) VALUES ('$TenPhong', '$HinhPhong')";
+
+					$sql = "INSERT INTO PHONG (TenPhong, GiaPhong, TinhTrang, HinhPhong) VALUES ('$TenPhong', $GiaPhong, $TinhTrang, '$HinhPhong')";
+
 					if ($conn->query($sql) === TRUE) {
 						$last_id = $conn->insert_id;
 						if (!empty($_FILES['HinhPhong']['name']))
