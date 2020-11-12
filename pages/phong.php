@@ -28,12 +28,10 @@
 					}
 				} else {
 					$TenPhong     = $_POST['TenPhong'];
-					$GiaPhong = $_POST['GiaPhong'];
-					$TinhTrang = $_POST['TinhTrang'];
 					if (!empty($_FILES['HinhPhong']['name']))
 						$HinhPhong    = time() . ".png";
 					else $HinhPhong = '';
-					$sql = "INSERT INTO PHONG (TenPhong, GiaPhong, TinhTrang, HinhPhong) VALUES ('$TenPhong', '$GiaPhong', '$TinhTrang', '$HinhPhong')";
+					$sql = "INSERT INTO PHONG (TenPhong, HinhPhong) VALUES ('$TenPhong', '$HinhPhong')";
 					if ($conn->query($sql) === TRUE) {
 						$last_id = $conn->insert_id;
 						if (!empty($_FILES['HinhPhong']['name']))
