@@ -29,6 +29,8 @@ while($row = mysqli_fetch_assoc($data)) {
 	$arrData[] = array(
 		'MaPhong'   => $row['MaPhong'],
 		'TenPhong'  => $row['TenPhong'],
+		'GiaPhong'  => $row['GiaPhong'],
+		'TinhTrang'  => $row['TinhTrang'],
 	);
 }
 
