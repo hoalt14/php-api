@@ -5,15 +5,13 @@
 			if (@$_POST['submit']) {
 				if (@$_GET['id']) {
 					$TenPhong     = $_POST['TenPhong'];
-					$GiaPhong = $_POST['GiaPhong'];
-					$TinhTrang = $_POST['TinhTrang'];
 					$result = $conn->query("SELECT * FROM PHONG WHERE MaPhong = " . $_GET['id'] . " LIMIT 1");
 					$row = $result->fetch_assoc();
 					if (!empty($_FILES['HinhPhong']['name'])) {
 						$HinhPhong    = time() . ".png";
-						$sql = "UPDATE PHONG SET TenPhong='$TenPhong', GiaPhong='$GiaPhong', TinhTrang='$TinhTrang', HinhPhong = '$HinhPhong' WHERE MaPhong=" . $row['MaPhong'];
+						$sql = "UPDATE PHONG SET TenPhong='$TenPhong', HinhPhong = '$HinhPhong' WHERE MaPhong=" . $row['MaPhong'];
 					} else {
-						$sql = "UPDATE PHONG SET TenPhong='$TenPhong', GiaPhong='$GiaPhong', TinhTrang='$TinhTrang' WHERE MaPhong=" . $row['MaPhong'];
+						$sql = "UPDATE PHONG SET TenPhong='$TenPhong' WHERE MaPhong=" . $row['MaPhong'];
 					}
 
 					if ($conn->query($sql) === TRUE) {
@@ -30,12 +28,10 @@
 					}
 				} else {
 					$TenPhong     = $_POST['TenPhong'];
-					$GiaPhong = $_POST['GiaPhong'];
-					$TinhTrang = $_POST['TinhTrang'];
 					if (!empty($_FILES['HinhPhong']['name']))
 						$HinhPhong    = time() . ".png";
 					else $HinhPhong = '';
-					$sql = "INSERT INTO PHONG (TenPhong, GiaPhong, TinhTrang, HinhPhong) VALUES ('$TenPhong', '$GiaPhong', '$TinhTrang', '$HinhPhong')";
+					$sql = "INSERT INTO PHONG (TenPhong, HinhPhong) VALUES ('$TenPhong', '$HinhPhong')";
 					if ($conn->query($sql) === TRUE) {
 						$last_id = $conn->insert_id;
 						if (!empty($_FILES['HinhPhong']['name']))
@@ -43,7 +39,7 @@
 						echo "<script>alert('Thêm Phòng thành công');</script>";
 						echo "<script>window.location='" . BASE_URL . "?pages=phong&type=add&id=" . $last_id . "'</script>";
 					} else {
-						echo "Error: " . $sql . "<br>" . $conn->error;
+						// echo "Error: " . $sql . "<br>" . $conn->error;
 						echo "<script>alert('Có lỗi xảy ra, vui lòng thử lại');</script>";
 						echo "<script>window.location='" . BASE_URL . "?pages=phong&type=add'</script>";
 					}
