@@ -1,9 +1,9 @@
 <?php 
 require_once '../connect.php';
 
-define('BASE_URL',   'http://zingmp3.tctruyen.com/admin/');
-define('BASE_PUBLIC',   'http://zingmp3.tctruyen.com/public/');
-define('BASE_UPLOAD',   'http://zingmp3.tctruyen.com/upload/');
+define('BASE_URL',   'http://testphp.newpinetech.com/admin/');
+define('BASE_PUBLIC',   'http://testphp.newpinetech.com/public/');
+define('BASE_UPLOAD',   'http://testphp.newpinetech.com/upload/');
 
 ?>
 <html lang="">
@@ -11,7 +11,7 @@ define('BASE_UPLOAD',   'http://zingmp3.tctruyen.com/upload/');
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Admin Mp3 Zing</title>
+		<title>Admin</title>
 		<link rel="stylesheet" href="<?php echo BASE_PUBLIC ?>roboto.css">
 		<link rel="stylesheet" href="<?php echo BASE_PUBLIC ?>font-awesome.min.css">
 		<link rel="stylesheet" href="<?php echo BASE_PUBLIC ?>bootstrap.min.css">
@@ -30,7 +30,7 @@ define('BASE_UPLOAD',   'http://zingmp3.tctruyen.com/upload/');
 			<h3 style="margin: 0 auto;
     text-align: center;
     padding-top: 7px;
-">TRANG QUẢN TRỊ NHẠC NHÓM AN19</h3>
+">TRANG QUẢN TRỊ ỨNG DỤNG</h3>
 
 
 			
@@ -42,40 +42,15 @@ define('BASE_UPLOAD',   'http://zingmp3.tctruyen.com/upload/');
 				<li>
 					<a href="<?php echo BASE_URL ?>?pages=quangcao" class='<?php echo @$_GET['pages']=='quangcao'?'active':''; ?>' >
 						<i class='fa fa-tags'></i>
-						<label>Quảng Cáo</label>
+						<label>Người thuê</label>
 					</a>
 				</li>
 				<li>
 					<a href="<?php echo BASE_URL ?>?pages=album" class='<?php echo @$_GET['pages']=='album'?'active':''; ?>' >
 						<i class='fa fa-tags'></i>
-						<label>Album</label>
+						<label>Phòng</label>
 					</a>
 				</li>
-				<li>
-					<a href="<?php echo BASE_URL ?>?pages=baihat" class='<?php echo @$_GET['pages']=='baihat'?'active':''; ?>' >
-						<i class='fa fa-tags'></i>
-						<label>Bài Hát</label>
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo BASE_URL ?>?pages=chude" class='<?php echo @$_GET['pages']=='chude'?'active':''; ?>' >
-						<i class='fa fa-tags'></i>
-						<label>Chủ Đề</label>
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo BASE_URL ?>?pages=playlist" class='<?php echo @$_GET['pages']=='playlist'?'active':''; ?>' >
-						<i class='fa fa-tags'></i>
-						<label>Playlist</label>
-					</a>
-				</li>
-
-				<li>
-					<a href="<?php echo BASE_URL ?>?pages=theloai" class='<?php echo @$_GET['pages']=='theloai'?'active':''; ?>' >
-						<i class='fa fa-tags'></i>
-						<label>Thể Loại</label>
-					</a>
-				</li>				
 			</ul>
 		</div>
 		<div class='wrapper'>

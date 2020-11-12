@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username   = "vinhhyba_mp3zing";
-$password   = "QtEDGs68Fmp3zing";
-$dbname     = "vinhhyba_mp3zing";
+$username   = "3men";
+$password   = "password";
+$dbname     = "qlnt";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 mysqli_set_charset($conn,"utf8");
@@ -13,8 +13,8 @@ if ($conn->connect_error) {
 
 
 
-define('BASE_URL',   'https://zingmp3.tctruyen.com/admin/');
-define('BASE_API',   'https://zingmp3.tctruyen.com/api/');
-define('BASE_PUBLIC',   'https://zingmp3.tctruyen.com/public/');
-define('BASE_UPLOAD',   'https://zingmp3.tctruyen.com/upload/');
+define('BASE_URL',   'http://testphp.newpinetech.com/admin/');
+define('BASE_API',   'http://testphp.newpinetech.com/api/');
+define('BASE_PUBLIC',   'http://testphp.newpinetech.com/public/');
+define('BASE_UPLOAD',   'http://testphp.newpinetech.com/upload/');
 ?>
