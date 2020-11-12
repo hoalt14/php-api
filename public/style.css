@@ -1,0 +1,72 @@
+:root {
+	--width-sidebar : 200px;
+	--bg-color: #f5f5f5;
+}
+
+*{
+	font-family: "Roboto",sans-serif;
+}
+
+.header-bar{
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+	background: var(--bg-color);
+}
+
+.sidebar-left{
+	height: calc(100% - 40px);
+	width: var(--width-sidebar);
+	border-right: 1px solid #ccc;
+	float: left;
+	background: var(--bg-color);
+}
+
+.wrapper{
+	height: calc(100% - 40px);
+	width: calc(100% - var(--width-sidebar));
+	float: left;
+    overflow-y: auto;
+}
+
+.ul-control{
+    margin: 0;
+    padding: 0;
+}
+.ul-control li{
+	list-style: none;
+}
+.ul-control li a{
+    display: block;
+	padding: 10px 20px 10px 15px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #555555;
+    border-left: 4px solid transparent;
+}
+.ul-control li a:hover,.ul-control li a.active{
+	border-left-color: #2a00ff;
+    background: #dddddd;
+}
+.ul-control li a i{
+    width: 15px;
+}
+.ul-control li a label{
+    margin: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.box{
+    border: 1px solid #ccc;    
+    border-top: 3px solid #2a00ff;
+}
+
+.box .header{
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+.box .body{
+	padding: 10px;
+}
