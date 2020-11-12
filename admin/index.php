@@ -11,7 +11,7 @@ define('BASE_UPLOAD',   'http://testphp.newpinetech.com/upload/');
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Admin</title>
+		<title>Administrator</title>
 		<link rel="stylesheet" href="<?php echo BASE_PUBLIC ?>roboto.css">
 		<link rel="stylesheet" href="<?php echo BASE_PUBLIC ?>font-awesome.min.css">
 		<link rel="stylesheet" href="<?php echo BASE_PUBLIC ?>bootstrap.min.css">
@@ -46,7 +46,7 @@ define('BASE_UPLOAD',   'http://testphp.newpinetech.com/upload/');
 					</a>
 				</li>
 				<li>
-					<a href="<?php echo BASE_URL ?>?pages=album" class='<?php echo @$_GET['pages']=='album'?'active':''; ?>' >
+					<a href="<?php echo BASE_URL ?>?pages=phong" class='<?php echo @$_GET['pages']=='phong'?'active':''; ?>' >
 						<i class='fa fa-tags'></i>
 						<label>Phòng</label>
 					</a>
