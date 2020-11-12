@@ -159,11 +159,11 @@
 							$result = $conn->query("SELECT * FROM PHONG");
 							if ($result->num_rows > 0) {
 								while ($row = $result->fetch_assoc()) {
-									echo '<tr>
+									echo "<tr>
 											<td>$row[MaPhong]</td>
 											<td>$row[TenPhong]</td>
 											<td>$row[GiaPhong]</td>
-											<td>';
+											<td>";
 										if ($row['TinhTrang'] == 1) echo 'Có';
 										else echo 'Không';	
 										echo "</td>
