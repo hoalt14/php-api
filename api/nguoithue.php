@@ -1,7 +1,7 @@
 <?php 
 require_once '../connect.php';
 
-if(@$_GET['idBaiHat']){
+if(@$_GET['MaNguoiThue']){
 	$sql = "SELECT bh.*, ab.tenAlbum, tl.tenTheLoai, pl.tenPlayList
 		FROM baihat bh
 		LEFT JOIN album ab ON bh.idAlbum = ab.idAlbum
