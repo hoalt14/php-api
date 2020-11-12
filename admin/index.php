@@ -64,11 +64,16 @@ define('BASE_UPLOAD', 'http://testphp.newpinetech.com/upload/');
 					<label>Playlist</label>
 				</a>
 			</li>
-
 			<li>
 				<a href="<?php echo BASE_URL ?>?pages=theloai" class='<?php echo @$_GET['pages'] == 'theloai' ? 'active' : ''; ?>'>
 					<i class='fa fa-tags'></i>
 					<label>Thể Loại</label>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo BASE_URL ?>?pages=phong" class='<?php echo @$_GET['pages'] == 'phong' ? 'active' : ''; ?>'>
+					<i class='fa fa-tags'></i>
+					<label>Phòng</label>
 				</a>
 			</li>
 		</ul>
