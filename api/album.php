@@ -1,7 +1,7 @@
 <?php 
 require_once '../connect.php';
 
-if(@$_GET['']){
+if(@$_GET['idAlbum']){
 	$sql = "SELECT * FROM album WHERE idAlbum = ".$_GET['idAlbum'];
 }else{
 	if($_GET['type'] == 'hot'){
